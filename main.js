@@ -85,6 +85,23 @@ thin.onclick = function(){
 thick.onclick = function(){
   lineWidth = 8;
 }
+
+//清屏的功能，把canvas画的图都删掉
+clear.onclick = function(){
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+//下载图片的功能
+download.onclick = function(){
+  var url = canvas.toDataURL("image/png");
+  //console.log(url);是一串数字和字母的组合，代表的是这幅图
+  var a = document.createElement('a');
+  document.body.appendChild(a);
+  a.href = url;
+  a.download = "你画的画";
+  a.target = '_blank';
+  a.click();
+}
 /**以下是工具函数**/
 
 
