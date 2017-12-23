@@ -89,6 +89,10 @@ download.onclick = function(){
   a.target = '_blank';
   a.click();
 }
+use.onclick = function(){
+  howuse.classList.add('active')
+  use.classList.add('popbox')
+}
 
 
 /**以下是工具函数**/
@@ -145,6 +149,8 @@ function listenToUser(canvas){
         //drawCircle(x, y, 2);
         lastPoint = {'x': x, 'y': y}
       }
+      howuse.classList.remove('active')
+      use.classList.remove('popbox')
     }
     canvas.ontouchmove = function(msg){
       console.log('边摸边动')
@@ -191,7 +197,8 @@ function listenToUser(canvas){
         //drawCircle(x, y, 2);
         lastPoint = {'x': x, 'y': y}
       }
-    
+      howuse.classList.remove('active')
+      use.classList.remove('popbox')
     };
   
     canvas.onmousemove = function (msg){
