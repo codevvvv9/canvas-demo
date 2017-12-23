@@ -1,0 +1,16 @@
+body{margin: 0}
+#canvas{background: green;display: block;}
+.actions{
+  position: fixed; 
+  bottom: 0px; 
+  left:0px;
+}
+.actions > #brush{
+  display: none;
+}
+.actions.x > #brush{
+  display:inline-block;
+}
+.actions.x > #eraser{
+  display: none;
+}
