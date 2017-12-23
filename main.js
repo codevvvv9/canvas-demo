@@ -24,18 +24,36 @@ red.onclick = function(){
   red.classList.add('active');
   green.classList.remove('active');
   blue.classList.remove('active');
+  black.classList.remove('active');
+  gray.classList.remove('active');
+  yellow.classList.remove('active');
+  purple.classList.remove('active');
+  pink.classList.remove('active');
+  orange.classList.remove('active');
   context.strokeStyle = 'red'
 }
 green.onclick = function(){
   red.classList.remove('active');
   green.classList.add('active');
   blue.classList.remove('active');
+  black.classList.remove('active');
+  gray.classList.remove('active');
+  yellow.classList.remove('active');
+  purple.classList.remove('active');
+  pink.classList.remove('active');
+  orange.classList.remove('active');
   context.strokeStyle = 'green'
 }
 blue.onclick = function(){
   red.classList.remove('active');
   green.classList.remove('active');
   blue.classList.add('active');
+  black.classList.remove('active');
+  gray.classList.remove('active');
+  yellow.classList.remove('active');
+  purple.classList.remove('active');
+  pink.classList.remove('active');
+  orange.classList.remove('active');
   context.strokeStyle = 'blue'
 }
 
@@ -44,18 +62,36 @@ yellow.onclick = function(){
   black.classList.remove('active');
   gray.classList.remove('active');
   yellow.classList.add('active');
+  red.classList.remove('active');
+  green.classList.remove('active');
+  blue.classList.remove('active');
+  purple.classList.remove('active');
+  pink.classList.remove('active');
+  orange.classList.remove('active');
   context.strokeStyle = 'yellow'
 }
 black.onclick = function(){
   yellow.classList.remove('active');
   gray.classList.remove('active');
   black.classList.add('active');
+  red.classList.remove('active');
+  green.classList.remove('active');
+  blue.classList.remove('active');
+  purple.classList.remove('active');
+  pink.classList.remove('active');
+  orange.classList.remove('active');
   context.strokeStyle = 'black'
 }
 gray.onclick = function(){
   black.classList.remove('active');
   yellow.classList.remove('active');
   gray.classList.add('active');
+  red.classList.remove('active');
+  green.classList.remove('active');
+  blue.classList.remove('active');
+  purple.classList.remove('active');
+  pink.classList.remove('active');
+  orange.classList.remove('active');
   context.strokeStyle = 'gray'
 }
 
@@ -64,18 +100,36 @@ orange.onclick = function(){
   purple.classList.remove('active');
   pink.classList.remove('active');
   orange.classList.add('active');
+  black.classList.remove('active');
+  yellow.classList.remove('active');
+  gray.classList.remove('active');
+  red.classList.remove('active');
+  green.classList.remove('active');
+  blue.classList.remove('active');
   context.strokeStyle = 'orange'
 }
 purple.onclick = function(){
   pink.classList.remove('active');
   orange.classList.remove('active');
   purple.classList.add('active');
+  black.classList.remove('active');
+  yellow.classList.remove('active');
+  gray.classList.remove('active');
+  red.classList.remove('active');
+  green.classList.remove('active');
+  blue.classList.remove('active');
   context.strokeStyle = 'purple'
 }
 pink.onclick = function(){
   orange.classList.remove('active');
   purple.classList.remove('active');
   pink.classList.add('active');
+  black.classList.remove('active');
+  yellow.classList.remove('active');
+  gray.classList.remove('active');
+  red.classList.remove('active');
+  green.classList.remove('active');
+  blue.classList.remove('active');
   context.strokeStyle = 'pink'
 }
 
@@ -176,6 +230,16 @@ function listenToUser(canvas){
       console.log('摸完了')
       isUsing = false;
       // eraserIsEnabled = false;
+      //鼠标一旦抬起，就把所有的颜色的active取消
+      orange.classList.remove('active');
+      purple.classList.remove('active');
+      pink.classList.remove('active');
+      black.classList.remove('active');
+      yellow.classList.remove('active');
+      gray.classList.remove('active');
+      red.classList.remove('active');
+      green.classList.remove('active');
+      blue.classList.remove('active');
     }
   }else{
     //是电脑
@@ -212,6 +276,16 @@ function listenToUser(canvas){
     canvas.onmouseup = function(){
       isUsing = false;
       // eraserIsEnabled = false;
+      //鼠标一旦抬起，就把所有的颜色的active取消
+      orange.classList.remove('active');
+      purple.classList.remove('active');
+      pink.classList.remove('active');
+      black.classList.remove('active');
+      yellow.classList.remove('active');
+      gray.classList.remove('active');
+      red.classList.remove('active');
+      green.classList.remove('active');
+      blue.classList.remove('active');
     };
   }
   
