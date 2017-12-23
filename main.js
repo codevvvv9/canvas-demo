@@ -92,7 +92,7 @@ function listenToUser(canvas){
     canvas.ontouchend = function(){
       console.log('摸完了')
       isUsing = false;
-      eraserIsEnabled = false;
+      // eraserIsEnabled = false;
     }
   }else{
     //是电脑
@@ -128,7 +128,7 @@ function listenToUser(canvas){
   
     canvas.onmouseup = function(){
       isUsing = false;
-      eraserIsEnabled = false;
+      // eraserIsEnabled = false;
     };
   }
   
