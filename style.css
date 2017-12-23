@@ -104,7 +104,7 @@ body{margin: 0;overflow: hidden;}
 }
 .sizes > .thin{
   height: 0;
-  width: 50px;
+  width: 100px;
   border-top: 3px solid black;
 }
 
@@ -114,7 +114,7 @@ body{margin: 0;overflow: hidden;}
 }
 .sizes > .thick{
   height: 0;
-  width: 50px;
+  width: 100px;
   border-top: 6px solid black;
 }
 .sizes > .thick.active{
