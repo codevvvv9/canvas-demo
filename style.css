@@ -99,14 +99,24 @@ body{margin: 0;overflow: hidden;}
 }
 .sizes > li{
     margin: 20px 0;
+    transition: all 0.4s;
 }
 .sizes > .thin{
   height: 0;
   width: 50px;
   border-top: 3px solid black;
 }
+
+.sizes > .thin.active{
+  box-shadow: 0 0 10px red;
+  transform: scale(1.2);
+}
 .sizes > .thick{
   height: 0;
   width: 50px;
   border-top: 6px solid black;
+}
+.sizes > .thick.active{
+  box-shadow: 0 0 10px red;
+  transform: scale(1.2);
 }

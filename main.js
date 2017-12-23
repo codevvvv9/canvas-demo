@@ -19,124 +19,57 @@ eraser.onclick = function(){
   pen.classList.remove('active');
 }
 
+
 //控制colors
 red.onclick = function(){
-  red.classList.add('active');
-  green.classList.remove('active');
-  blue.classList.remove('active');
-  black.classList.remove('active');
-  gray.classList.remove('active');
-  yellow.classList.remove('active');
-  purple.classList.remove('active');
-  pink.classList.remove('active');
-  orange.classList.remove('active');
+  activeColor('red');
   context.strokeStyle = 'red'
 }
 green.onclick = function(){
-  red.classList.remove('active');
-  green.classList.add('active');
-  blue.classList.remove('active');
-  black.classList.remove('active');
-  gray.classList.remove('active');
-  yellow.classList.remove('active');
-  purple.classList.remove('active');
-  pink.classList.remove('active');
-  orange.classList.remove('active');
+  activeColor('green');
   context.strokeStyle = 'green'
 }
 blue.onclick = function(){
-  red.classList.remove('active');
-  green.classList.remove('active');
-  blue.classList.add('active');
-  black.classList.remove('active');
-  gray.classList.remove('active');
-  yellow.classList.remove('active');
-  purple.classList.remove('active');
-  pink.classList.remove('active');
-  orange.classList.remove('active');
+  activeColor('blue');
   context.strokeStyle = 'blue'
 }
 
 //控制colors2
 yellow.onclick = function(){
-  black.classList.remove('active');
-  gray.classList.remove('active');
-  yellow.classList.add('active');
-  red.classList.remove('active');
-  green.classList.remove('active');
-  blue.classList.remove('active');
-  purple.classList.remove('active');
-  pink.classList.remove('active');
-  orange.classList.remove('active');
+  activeColor('yellow')
   context.strokeStyle = 'yellow'
 }
 black.onclick = function(){
-  yellow.classList.remove('active');
-  gray.classList.remove('active');
-  black.classList.add('active');
-  red.classList.remove('active');
-  green.classList.remove('active');
-  blue.classList.remove('active');
-  purple.classList.remove('active');
-  pink.classList.remove('active');
-  orange.classList.remove('active');
+  activeColor('black')
   context.strokeStyle = 'black'
 }
 gray.onclick = function(){
-  black.classList.remove('active');
-  yellow.classList.remove('active');
-  gray.classList.add('active');
-  red.classList.remove('active');
-  green.classList.remove('active');
-  blue.classList.remove('active');
-  purple.classList.remove('active');
-  pink.classList.remove('active');
-  orange.classList.remove('active');
+  activeColor('gray')
   context.strokeStyle = 'gray'
 }
 
 //控制colors3
 orange.onclick = function(){
-  purple.classList.remove('active');
-  pink.classList.remove('active');
-  orange.classList.add('active');
-  black.classList.remove('active');
-  yellow.classList.remove('active');
-  gray.classList.remove('active');
-  red.classList.remove('active');
-  green.classList.remove('active');
-  blue.classList.remove('active');
+  activeColor('orange')
   context.strokeStyle = 'orange'
 }
 purple.onclick = function(){
-  pink.classList.remove('active');
-  orange.classList.remove('active');
-  purple.classList.add('active');
-  black.classList.remove('active');
-  yellow.classList.remove('active');
-  gray.classList.remove('active');
-  red.classList.remove('active');
-  green.classList.remove('active');
-  blue.classList.remove('active');
+  activeColor('purple')
   context.strokeStyle = 'purple'
 }
 pink.onclick = function(){
-  orange.classList.remove('active');
-  purple.classList.remove('active');
-  pink.classList.add('active');
-  black.classList.remove('active');
-  yellow.classList.remove('active');
-  gray.classList.remove('active');
-  red.classList.remove('active');
-  green.classList.remove('active');
-  blue.classList.remove('active');
+  activeColor('pink')
   context.strokeStyle = 'pink'
 }
 
 thin.onclick = function(){
+  thin.classList.add('active')
+  thick.classList.remove('active')
   lineWidth = 3;
 }
 thick.onclick = function(){
+  thin.classList.remove('active')
+  thick.classList.add('active')
   lineWidth = 8;
 }
 
@@ -156,8 +89,9 @@ download.onclick = function(){
   a.target = '_blank';
   a.click();
 }
-/**以下是工具函数**/
 
+
+/**以下是工具函数**/
 
 //绘制圆形的函数
 function drawCircle(x, y, radius){
@@ -240,6 +174,8 @@ function listenToUser(canvas){
       red.classList.remove('active');
       green.classList.remove('active');
       blue.classList.remove('active');
+      thick.classList.remove('active')
+      thin.classList.remove('active')
     }
   }else{
     //是电脑
@@ -286,8 +222,114 @@ function listenToUser(canvas){
       red.classList.remove('active');
       green.classList.remove('active');
       blue.classList.remove('active');
+      thick.classList.remove('active')
+      thin.classList.remove('active')
     };
   }
   
+ 
+}
+
+//激活绘图颜色的函数
+function activeColor(color){
+  if ('red' === color){
+    red.classList.add('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
+    black.classList.remove('active');
+    gray.classList.remove('active');
+    yellow.classList.remove('active');
+    purple.classList.remove('active');
+    pink.classList.remove('active');
+    orange.classList.remove('active');
+  }
+  if ('green' === color){
+    red.classList.remove('active');
+    green.classList.add('active');
+    blue.classList.remove('active');
+    black.classList.remove('active');
+    gray.classList.remove('active');
+    yellow.classList.remove('active');
+    purple.classList.remove('active');
+    pink.classList.remove('active');
+    orange.classList.remove('active');
+  }
+  if ('blue' === color){
+    red.classList.remove('active');
+    green.classList.remove('active');
+    blue.classList.add('active');
+    black.classList.remove('active');
+    gray.classList.remove('active');
+    yellow.classList.remove('active');
+    purple.classList.remove('active');
+    pink.classList.remove('active');
+    orange.classList.remove('active');
+  }
+  if ('black' === color){
+    red.classList.remove('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
+    black.classList.add('active');
+    gray.classList.remove('active');
+    yellow.classList.remove('active');
+    purple.classList.remove('active');
+    pink.classList.remove('active');
+    orange.classList.remove('active');
+  }
+  if ('gray' === color){
+    red.classList.remove('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
+    black.classList.remove('active');
+    gray.classList.add('active');
+    yellow.classList.remove('active');
+    purple.classList.remove('active');
+    pink.classList.remove('active');
+    orange.classList.remove('active');
+  }
+  if ('yellow' === color){
+    red.classList.remove('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
+    black.classList.remove('active');
+    gray.classList.remove('active');
+    yellow.classList.add('active');
+    purple.classList.remove('active');
+    pink.classList.remove('active');
+    orange.classList.remove('active');
+  }
+  if ('purple' === color){
+    red.classList.remove('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
+    black.classList.remove('active');
+    gray.classList.remove('active');
+    yellow.classList.remove('active');
+    purple.classList.add('active');
+    pink.classList.remove('active');
+    orange.classList.remove('active');
+  }
+  if ('orange' === color){
+    red.classList.remove('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
+    black.classList.remove('active');
+    gray.classList.remove('active');
+    yellow.classList.remove('active');
+    purple.classList.remove('active');
+    pink.classList.remove('active');
+    orange.classList.add('active');
+  }
+  if ('pink' === color){
+    red.classList.remove('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
+    black.classList.remove('active');
+    gray.classList.remove('active');
+    yellow.classList.remove('active');
+    purple.classList.remove('active');
+    pink.classList.add('active');
+    orange.classList.remove('active');
+  }
  
 }
