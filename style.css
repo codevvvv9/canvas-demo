@@ -86,3 +86,21 @@ body{margin: 0;overflow: hidden;}
   box-shadow: 0 0 10px black;
   transform: scale(1.2);
 }
+.sizes{
+  position: fixed;
+  right: 40px;
+  top: 10px;
+}
+.sizes > li{
+    margin: 20px 0;
+}
+.sizes > .thin{
+  height: 0;
+  width: 50px;
+  border-top: 3px solid black;
+}
+.sizes > .thick{
+  height: 0;
+  width: 50px;
+  border-top: 6px solid black;
+}

@@ -1,6 +1,6 @@
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
-
+var lineWidth = 4;
 //1、
 auotSetCanvasSize(canvas)
 //2、
@@ -73,10 +73,17 @@ purple.onclick = function(){
   context.strokeStyle = 'purple'
 }
 pink.onclick = function(){
-  orange .classList.remove('active');
+  orange.classList.remove('active');
   purple.classList.remove('active');
   pink.classList.add('active');
   context.strokeStyle = 'pink'
+}
+
+thin.onclick = function(){
+  lineWidth = 3;
+}
+thick.onclick = function(){
+  lineWidth = 8;
 }
 /**以下是工具函数**/
 
@@ -93,7 +100,7 @@ function drawLine(x1, y1, x2, y2){
   context.beginPath();
   // context.strokeStyle = 'black'
   context.moveTo(x1, y1);
-  context.lineWidth = 5;
+  context.lineWidth = lineWidth;
   context.lineTo(x2, y2);
   context.stroke();
   context.closePath();
