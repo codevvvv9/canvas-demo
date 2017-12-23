@@ -1,16 +1,88 @@
+ol, ul{
+  list-style: none;
+}
+*{margin: 0;padding: 0px;}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
 body{margin: 0}
-#canvas{background: green;display: block;}
+#canvas{display: block;}
 .actions{
   position: fixed; 
-  bottom: 0px; 
+  top: 0px; 
   left:0px;
+  padding: 20px;
 }
-.actions > #brush{
-  display: none;
+.actions svg{width: 1.5em;height: 1.5em; transition: all 0.3s;margin: 0px 8px;}
+.actions svg.active{fill: red;transform: scale(1.3)}
+.colors{position: fixed;top: 50px;left: 24px;}
+.colors2{position: fixed;top: 50px;left: 54px;}
+.colors3{position: fixed;top: 50px;left: 86px;}
+.colors > li{
+  width: 20px;
+  height: 20px;
+  margin: 8px 0px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px grey;
+  transition: all 0.3s;
 }
-.actions.x > #brush{
-  display:inline-block;
+.colors2 > li{
+  width: 20px;
+  height: 20px;
+  margin: 8px 0px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px grey;
+  transition: all 0.3s;
 }
-.actions.x > #eraser{
-  display: none;
+.colors3 > li{
+  width: 20px;
+  height: 20px;
+  margin: 8px 0px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px grey;
+  transition: all 0.3s;
+}
+.colors > li.red{
+  background: red;
+}
+.colors > li.green{
+  background: green;
+}
+.colors > li.blue{
+  background: blue;
+}
+.colors > li.active{
+  box-shadow: 0 0 10px black;
+  transform: scale(1.2);
+}
+
+.colors2 > li.yellow{
+  background: yellow;
+}
+.colors2 > li.black{
+  background: black;
+}
+.colors2 > li.gray{
+  background: gray;
+}
+.colors2 > li.active{
+  box-shadow: 0 0 10px black;
+  transform: scale(1.2);
+}
+
+.colors3 > li.orange{
+  background: orange;
+}
+.colors3 > li.purple{
+  background: purple;
+}
+.colors3 > li.pink{
+  background: pink;
+}
+.colors3 > li.active{
+  box-shadow: 0 0 10px black;
+  transform: scale(1.2);
 }

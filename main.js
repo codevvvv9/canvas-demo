@@ -8,31 +8,90 @@ listenToUser(canvas)
 
 //3、
 var eraserIsEnabled = false;
+pen.onclick = function(){
+  eraserIsEnabled = false;
+  pen.classList.add('active');
+  eraser.classList.remove('active');
+}
 eraser.onclick = function(){
-  eraserIsEnabled = true
-  actions.className = 'actions x'
- 
-}
-brush.onclick = function(){
-  eraserIsEnabled = false
-  actions.className = 'actions'
+  eraserIsEnabled = true;
+  eraser.classList.add('active');
+  pen.classList.remove('active');
 }
 
+//控制colors
+red.onclick = function(){
+  red.classList.add('active');
+  green.classList.remove('active');
+  blue.classList.remove('active');
+  context.strokeStyle = 'red'
+}
+green.onclick = function(){
+  red.classList.remove('active');
+  green.classList.add('active');
+  blue.classList.remove('active');
+  context.strokeStyle = 'green'
+}
+blue.onclick = function(){
+  red.classList.remove('active');
+  green.classList.remove('active');
+  blue.classList.add('active');
+  context.strokeStyle = 'blue'
+}
 
+//控制colors2
+yellow.onclick = function(){
+  black.classList.remove('active');
+  gray.classList.remove('active');
+  yellow.classList.add('active');
+  context.strokeStyle = 'yellow'
+}
+black.onclick = function(){
+  yellow.classList.remove('active');
+  gray.classList.remove('active');
+  black.classList.add('active');
+  context.strokeStyle = 'black'
+}
+gray.onclick = function(){
+  black.classList.remove('active');
+  yellow.classList.remove('active');
+  gray.classList.add('active');
+  context.strokeStyle = 'gray'
+}
+
+//控制colors3
+orange.onclick = function(){
+  purple.classList.remove('active');
+  pink.classList.remove('active');
+  orange.classList.add('active');
+  context.strokeStyle = 'orange'
+}
+purple.onclick = function(){
+  pink.classList.remove('active');
+  orange.classList.remove('active');
+  purple.classList.add('active');
+  context.strokeStyle = 'purple'
+}
+pink.onclick = function(){
+  orange .classList.remove('active');
+  purple.classList.remove('active');
+  pink.classList.add('active');
+  context.strokeStyle = 'pink'
+}
 /**以下是工具函数**/
 
 
 //绘制圆形的函数
 function drawCircle(x, y, radius){
   context.beginPath();
-  context.fillStyle = 'black';
+  //context.fillStyle = 'black';
   context.arc(x, y, radius, 0, Math.PI*2);
   context.fill();
 }
 //目前是前后的点不连续，用下面这个函数使其连续
 function drawLine(x1, y1, x2, y2){
   context.beginPath();
-  context.strokeStyle = 'black'
+  // context.strokeStyle = 'black'
   context.moveTo(x1, y1);
   context.lineWidth = 5;
   context.lineTo(x2, y2);
@@ -68,7 +127,7 @@ function listenToUser(canvas){
       var y = msg.touches[0].clientY;
       isUsing = true;
       if (eraserIsEnabled){
-       context.clearRect(x, y, 10, 10)
+       context.clearRect(x, y, 14, 14)
       } else {
      
         //drawCircle(x, y, 2);
@@ -81,7 +140,7 @@ function listenToUser(canvas){
       var y = msg.touches[0].clientY;
       if (!isUsing){return}
       if (eraserIsEnabled){
-          context.clearRect(x, y, 10, 10)
+          context.clearRect(x, y, 14, 14)
       }else{
             var newPoint = {'x': x, 'y': y};
             //drawCircle(x, y, 2);
@@ -102,7 +161,7 @@ function listenToUser(canvas){
       var y = msg.clientY;
       isUsing = true;
       if (eraserIsEnabled){
-       context.clearRect(x, y, 10, 10)
+       context.clearRect(x, y, 14, 14)
       } else {
      
         //drawCircle(x, y, 2);
@@ -116,7 +175,7 @@ function listenToUser(canvas){
       var y = msg.clientY;
       if (!isUsing){return}
       if (eraserIsEnabled){
-          context.clearRect(x, y, 10, 10)
+          context.clearRect(x, y, 14, 14)
       }else{
             var newPoint = {'x': x, 'y': y};
             //drawCircle(x, y, 2);

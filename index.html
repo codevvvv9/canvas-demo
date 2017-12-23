@@ -7,13 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我的小画板</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="//at.alicdn.com/t/font_518913_snyiy1s3ghode7b9.js"></script>
 </head>
 <body>
     <canvas id="canvas" width="300px" height="300px"></canvas>
     <div id=actions class="actions">
-        <button id='eraser'>橡皮擦</button>
-        <button id='brush' >画笔</button>
+        <svg id="pen" class="icon active">
+            <use xlink:href="#icon-pen"></use>
+        </svg>
+        <svg id="eraser" class="icon">
+            <use xlink:href="#icon-erase"></use>
+        </svg>
+        <!-- <button id='eraser'>橡皮擦</button>
+        <button id='brush' >画笔</button> -->
     </div>
+    <ol class="colors">
+        <li id="red" class="red"></li>
+        <li id="green" class="green"></li>
+        <li id="blue" class="blue"></li>
+    </ol>
+    <ol class="colors2">
+        <li id="yellow" class="yellow"></li>
+        <li id="black" class="black"></li>
+        <li id="gray" class="gray"></li>
+    </ol>
+    <ol class="colors3">
+        <li id="orange" class="orange"></li>
+        <li id="purple" class="purple"></li>
+        <li id="pink" class="pink"></li>
+    </ol>
     <script src="./main.js"></script>
+    
 </body>
 </html>
