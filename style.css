@@ -9,7 +9,13 @@ ol, ul{
   overflow: hidden;
 }
 body{margin: 0;overflow: hidden;}
-#canvas{display: block;}
+#canvas{
+  display: block;
+  background: whitesmoke;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
 .actions{
   position: fixed; 
   top: 0px; 
